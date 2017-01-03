@@ -13,10 +13,11 @@ if __name__ == '__main__':
         print("Models:")
         for i in range(len(modelnames)):
             print(i,"-->",modelnames[i])
+        raise ValueError("Exiting, not enough inputs")
     else:
         if(not(sys.argv[1] in modelnames.values())):
-            print("Model Name Not Valid")
+            raise ValueError("Model Name Not Valid")
 
     #load tmy data for location
     #fn.tmy(30.0,30.0)
-    fn.tmy(30.0,30.0)
+    #fn.tmy(30.0,30.0)
